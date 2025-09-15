@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIO BREATHE</title>
+  <link rel="stylesheet" href="{% static 'advisor/style.css' %}">
+  <!-- Favicon (icon in the browser tab) -->
+  <link rel="icon" href="{% static 'advisor/images/LOGO.png' %}" type="image/x-icon">
+</head>
+<body>
+  <!-- Hero Section -->
+<div class="hero-section">
+    <div class="hero-content">
+      <h1>BIO BREATHE</h1>
+      <a href="{% url 'index' %}" class="hero-button">Let's get started</a>
+      <p class="hero-quote">Every plant is a silent air purifier, working for a healthier tomorrow</p>
+    </div>
+  </div>
+  
+</body>
+</html>

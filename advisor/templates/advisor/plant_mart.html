@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plants Mart</title>
+</head>
+<body>
+    <h1>Plants Mart</h1>
+    {% for product in products %}
+        <div style="border: 1px solid #ccc; padding: 10px; margin: 10px;">
+            <h3>{{ product.name }}</h3>
+            <img src="{{ product.image.url }}" width="150">
+            <p>{{ product.description }}</p>
+            <p>Price: ₹{{ product.price }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>

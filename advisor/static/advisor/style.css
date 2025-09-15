@@ -1,0 +1,373 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: url('./images/bg.jpg') no-repeat center center/cover;
+    backdrop-filter: blur(5px); /* ✅ blur effect */
+    -webkit-backdrop-filter: blur(5px); /* ✅ Safari support */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header {
+    background-color: rgba(34, 139, 34, 0); /* was #228B22 */
+    color: #FFFFFF;
+    width: 100%;
+    padding: 15px 0;
+    backdrop-filter: blur(8px); /* ✅ Soft blur */
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Center the title */
+    position: relative;
+}
+
+/* Position the logo at the left of the header */
+.logo {
+    position: absolute;
+    left: 60px;  /* Adjust as needed */
+}
+
+.logo img {
+    height: 75px; /* Adjust the size of the logo as needed */
+    width: auto;
+}
+
+.title {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Your remaining CSS stays the same... */
+nav {
+    background-color: rgba(50, 205, 50, 0); /* was #32CD32 */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* subtle line */
+    border-radius: 0 0 15px 15px;
+    backdrop-filter: blur(8px); /* ✅ Blur effect for navbar */
+    -webkit-backdrop-filter: blur(8px);
+}
+
+nav a {
+    background-color: rgba(34, 139, 34, 0.6); /* semi-transparent green */
+    color: #FFFFFF;
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    background-color: rgba(29, 106, 29, 0.7); /* slightly darker green */
+    transform: scale(1.05);
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px 0;
+}
+
+.intro h1 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 2.5rem;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.team p {
+    background-color: #444444;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.project-info {
+    width: 100%;
+}
+
+.info-card {
+    background-color: #2E3B4E;
+    color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.advisor-container {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 40px;
+}
+
+.input-card,
+.output-card {
+    background-color: #2E3B4E;
+    color: #fff9f9;
+    flex: 1;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.input-card:hover,
+.output-card:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-card input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 2px solid #32CD32;
+    border-radius: 6px;
+    outline: none;
+    margin: 0 auto;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-card input[type="text"]:focus {
+    border: 2px solid #228B22;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(50, 205, 50, 0.3);
+}
+
+.input-card button {
+    width: 90%;
+    background: linear-gradient(135deg, #32CD32, #228B22);
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px auto;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.input-card button:hover {
+    background: linear-gradient(135deg, #228B22, #1D6A1D);
+    transform: scale(1.05);
+}
+
+.output-card p {
+    background-color: #444444;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.plant-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+}
+
+.plant-card {
+    background-color: #2E3B4E;
+    color: #e8e2e2;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+}
+
+.plant-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.plant-card img:hover {
+    transform: scale(1.1);
+}
+
+h3 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #FFFFFF; 
+    
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.recommendation-image {
+    display: block;       /* Allows margin: 0 auto to center */
+    margin: 0 auto;       /* Centers the image horizontally */
+    max-width: 200px;     /* Adjust as desired */
+    border-radius: 8px;
+    margin-top: 15px;     /* Spacing above the image */
+}
+/* Hero Section Styling */
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    background: url('./images/bg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.hero-content h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-quote {
+    font-size: 1rem;
+    max-width: 600px;
+    opacity: 0.85;
+    margin: 0 auto;
+}
+.hero-button {
+    background-color: #4c534c;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    margin-top: 20px;
+    opacity: 0.5;
+}
+
+.hero-button:hover {
+    background-color: #cfeacf;
+    transform: scale(1.05);
+}
+.custom-navbar {
+    background-color: transparent !important;
+}
+
+.custom-navbar .nav-link {
+    color: black !important;
+    font-weight: bold;
+}
+
+.custom-navbar .nav-link.active {
+    color: black !important;
+ 
+}
+/* Styling for the plant card */
+.plant-card {
+    position: relative;
+    background-color: #2E3B4E; /* Light background */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.plant-card:hover {
+    transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+/* Styling for the plant image */
+.plant-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Zoom effect on image hover */
+.plant-img:hover {
+    transform: scale(1.1);
+}
+
+/* Initially hide the maintenance information */
+.maintenance-info {
+    display: none;
+    font-size: 14px;
+    color: #f0ecec;
+    padding-top: 10px;
+}
+
+/* Show maintenance info on hover */
+.plant-card:hover .maintenance-info {
+    display: block;
+}
+
+/* Styling for plant description (basic info) */
+.plant-description {
+    font-size: 16px;
+    color: #e3dede;
+    padding-top: 8px;
+}
+
+/* Optional: Additional styling for plant name */
+.plant-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF; 
+}
+

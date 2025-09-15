@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nearby Plant Stores - Bio-Breathe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'advisor/style.css' %}">
+    <link rel="icon" href="{% static 'advisor/images/LOGO.png' %}" type="image/x-icon">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+      #map {
+        height: 500px;
+        width: 100%;
+        margin-top: 20px;
+      }
+    </style>
+</head>
+
+<body class="page-with-bg">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="{% static 'advisor/images/LOGO.png' %}" alt="Logo">
+            </div>
+            <div class="title">
+                Bio-Breathe
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-transparent custom-navbar">
+        <div class="container justify-content-center">
+            <div class="navbar-nav gap-3">
+                <a class="nav-link" href="{% url 'index' %}">Home</a>
+                <a class="nav-link" href="{% url 'plant_advisor' %}">Plant Advisor</a>
+                <a class="nav-link" href="{% url 'know_about_plants' %}">Know About Plants</a>
+                <a class="nav-link active" href="{% url 'nearby_stores' %}">Nearby Plant Stores</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container home-content mt-4">
+        <section class="project-info">
+            <h2 class="mb-4">Nearby Plant Stores</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="info-card">
+                        <h3>Find a Plant Store Near You</h3>
+                        <p>
+                            The map below automatically finds plant shops and nurseries near your current location.<br>
+                        </p>
+                        <div id="map"></div>
+                        <div id="map-message" class="mt-3 text-danger"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Your custom JS file for Geoapify integration -->
+    <script src="{% static 'nearby-stores.js' %}"></script>
+</body>
+</html>
