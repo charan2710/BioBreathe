@@ -20,16 +20,6 @@ Frontend: HTML, CSS, JavaScript
 Model: Trained plant recommendation model (.pkl)
 Database: SQLite
 
-📂 Project Structure
-BioBreathe/
-│
-├── plant_recommendation_model.pkl   # Trained ML model
-├── templates/                       # HTML templates
-├── static/                          # CSS, JS, images
-├── app/                             # Django app files
-├── manage.py                        # Django entry point
-└── requirements.txt                 # Dependencies
-
 ⚙️ Installation & Setup Guide
 
 Follow these steps to run the project on your system.
